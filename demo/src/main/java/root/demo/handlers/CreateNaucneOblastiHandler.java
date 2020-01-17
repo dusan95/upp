@@ -6,7 +6,9 @@ import org.camunda.bpm.engine.delegate.ExecutionListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import root.demo.model.NaucneOblasti;
+import root.demo.model.User;
 import root.demo.repository.NaucneOblastiRepo;
+import root.demo.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,6 +19,8 @@ public class CreateNaucneOblastiHandler implements ExecutionListener {
 
     @Autowired
     private NaucneOblastiRepo naucneOblastiRepo;
+    @Autowired
+    UserRepository userRepository;
 
     @Override
     public void notify(DelegateExecution delegateExecution) throws Exception {
@@ -34,13 +38,14 @@ public class CreateNaucneOblastiHandler implements ExecutionListener {
             naucneOblastiRepo.save(new NaucneOblasti("Ekonomscke nauke"));
             naucneOblastiRepo.save(new NaucneOblasti("Pravne nauke"));
             naucneOblastiRepo.save(new NaucneOblasti("Filozovija"));
+            User user = new User("admin","admin","","","","","admin","admin","admin","","");
+            userRepository.save(user);
         }
         naucneOblasti = naucneOblastiRepo.findAll();
         HashMap<String, String> lista = new HashMap<>();
         for( NaucneOblasti no : naucneOblasti){
             lista.put(no.getName(), no.getName());
         }
-
         delegateExecution.setVariable("sveNaucneOblasti", lista);
     }
 }
