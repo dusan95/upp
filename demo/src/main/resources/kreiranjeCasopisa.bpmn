@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0y8yj2k" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.4.1">
-  <bpmn:process id="KreiranjeCaspisa" name="KreiranjeCaspisa" isExecutable="true">
+  <bpmn:process id="KreiranjeCasopisa" name="Kreiranje Casopisa" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" camunda:initiator="init">
       <bpmn:outgoing>SequenceFlow_1947q6g</bpmn:outgoing>
     </bpmn:startEvent>
@@ -14,8 +14,10 @@
             <camunda:value id="authors" name="Autori" />
           </camunda:formField>
           <camunda:formField id="scientificFields" label="Naucne oblasti:" type="enum">
-            <camunda:value id="field1" name="Field 1" />
-            <camunda:value id="field2" name="Field 2" />
+            <camunda:value id="no1" name="Naucna oblast 1" />
+            <camunda:value id="no2" name="Naucna oblast 2" />
+            <camunda:value id="no3" name="Naucna oblast 3" />
+            <camunda:value id="no4" name="Naucna oblast 4" />
           </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
@@ -34,9 +36,11 @@
             <camunda:value id="urednik5" name="Urednik5" />
           </camunda:formField>
           <camunda:formField id="reviewers" label="Recenzenti" type="enum">
-            <camunda:value id="recenzent1" name="Recenzent1" />
-            <camunda:value id="recenzent2" name="Recenzent2" />
-            <camunda:value id="recenzent3" name="Recenzent3" />
+            <camunda:value id="recenzent1" name="Recenzent 1" />
+            <camunda:value id="recenzent2" name="Recenzent 2" />
+            <camunda:value id="recenzent3" name="Recenzent 3" />
+            <camunda:value id="recenzent4" name="Recenzent 4" />
+            <camunda:value id="recenzent5" name="Recenzent 5" />
           </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
@@ -115,7 +119,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_0h059ga" sourceRef="IntermediateThrowEvent_1hju6hl" targetRef="EndEvent_1p3svxt" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="KreiranjeCaspisa">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="KreiranjeCasopisa">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="152" y="209" width="36" height="36" />
       </bpmndi:BPMNShape>
