@@ -10,8 +10,8 @@
           <camunda:formField id="name" label="Naziv casopisa" type="string" />
           <camunda:formField id="issn" label="ISSN broj" type="long" />
           <camunda:formField id="payment" label="Ko placa participaciju" type="enum">
-            <camunda:value id="readers" name="Citaoci" />
-            <camunda:value id="authors" name="Autori" />
+            <camunda:value id="Citaoci" name="Citaoci" />
+            <camunda:value id="Autori" name="Autori" />
           </camunda:formField>
           <camunda:formField id="scientificFields" label="Naucne oblasti:" type="enum">
             <camunda:value id="no1" name="Naucna oblast 1" />
