@@ -69,14 +69,14 @@
       <bpmn:incoming>SequenceFlow_16dp5vv</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_1nx2u13</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="SequenceFlow_1ptu654" name="user" sourceRef="ExclusiveGateway_0ojrwcn" targetRef="EndEvent_1w122aj">
+    <bpmn:sequenceFlow id="SequenceFlow_1ptu654" sourceRef="ExclusiveGateway_0ojrwcn" targetRef="EndEvent_1w122aj">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${reviewer==false}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="SequenceFlow_083mewk" name="reviewer" sourceRef="ExclusiveGateway_0ojrwcn" targetRef="Approve_reviewer">
+    <bpmn:sequenceFlow id="SequenceFlow_083mewk" sourceRef="ExclusiveGateway_0ojrwcn" targetRef="Approve_reviewer">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${reviewer==true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1x6k9kx" sourceRef="Approve_reviewer" targetRef="Task_19h8lgi" />
-    <bpmn:serviceTask id="Task_19h8lgi" name="Sacuvaj status recenzenta" camunda:class="root.demo.services.ConfirmeReviewer">
+    <bpmn:serviceTask id="Task_19h8lgi" name="Sacuvaj status recenzenta" camunda:class="root.demo.services.ConfirmReviewer">
       <bpmn:incoming>SequenceFlow_1x6k9kx</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_10w8r4w</bpmn:outgoing>
     </bpmn:serviceTask>

@@ -134,7 +134,7 @@ public class DummyController {
 		}
 		String content =
 				"<header>"
-						+ "<h1>Uspjesno ste potvrdili registraciju</h1>"
+						+ "<h1>Uspesno ste potvrdili registraciju</h1>"
 						+ "</header>";
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.setContentType(MediaType.TEXT_HTML);

@@ -12,7 +12,7 @@ import root.demo.model.User;
 import root.demo.repository.UserRepository;
 
 @Service
-public class ConfirmeReviewer implements JavaDelegate {
+public class ConfirmReviewer implements JavaDelegate {
 
     @Autowired
     UserRepository userRepository;
