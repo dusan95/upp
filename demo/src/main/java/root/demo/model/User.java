@@ -24,9 +24,9 @@ public class User {
     @Column(name = "scientificFields")
     private String scientificFields;
     @Column(name = "username")
-    private String username;
+    String username;
     @Column(name = "password")
-    private String password;
+    String password;
     @Column(name = "role")
     private String role;
     @Column(name = "hashCode")

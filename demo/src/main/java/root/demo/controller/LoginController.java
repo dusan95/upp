@@ -24,6 +24,7 @@ public class LoginController {
     public @ResponseBody
     ResponseEntity getLogin(@PathVariable String username, @PathVariable String password) {
         List<User> allUsers = userRepository.findAll();
+        System.out.println(allUsers);
         User user = new User();
         for(User userDB:allUsers){
             if(userDB.getUsername().equals(username) && userDB.getPassword().equals(password)){

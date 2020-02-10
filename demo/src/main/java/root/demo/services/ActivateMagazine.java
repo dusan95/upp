@@ -1,5 +1,6 @@
 package root.demo.services;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -32,7 +33,8 @@ public class ActivateMagazine implements JavaDelegate {
         if (!magazines.isEmpty()) {
             for (Magazine temp : magazines) {
                 if (temp.getName().equals(nameMagazine)) {
-                    temp.setActive(activated);
+                    Boolean act = activated == "true" ? true : false;
+                    temp.setActive(act);
                     magazineRepository.save(temp);
                     break;
                 }

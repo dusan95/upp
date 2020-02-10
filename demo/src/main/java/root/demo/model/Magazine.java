@@ -1,5 +1,7 @@
 package root.demo.model;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import javax.persistence.*;
 
 @Entity
@@ -27,7 +29,7 @@ public class Magazine {
     String chiefEditor;
 
     @Column(name = "active")
-    String active;
+    Boolean active;
 
     @Column(name = "reviewers")
     String reviewers;
@@ -36,6 +38,16 @@ public class Magazine {
     String editors;
 
     public Magazine(String name, Long issn, String scientificFields, String payment) {
+        this.name = name;
+        this.issn = issn;
+        this.scientificFields = scientificFields;
+        this.payment = payment;
+    }
+    public Magazine(Boolean active, String chiefEditor, String editors, String reviewers, String name, Long issn, String scientificFields, String payment) {
+        this.active = active;
+        this.chiefEditor = chiefEditor;
+        this.editors = editors;
+        this.reviewers = reviewers;
         this.name = name;
         this.issn = issn;
         this.scientificFields = scientificFields;
@@ -93,11 +105,11 @@ public class Magazine {
         this.chiefEditor = chiefEditor;
     }
 
-    public String getActive() {
+    public Boolean getActive() {
         return active;
     }
 
-    public void setActive(String active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 

@@ -47,7 +47,7 @@ public class SaveMagazine implements JavaDelegate {
         execution.setVariable("sciFieldsToString",sciFieldsToString);
 
         Magazine newMagazine = new Magazine(name,issnLong,sciFieldsToString, payment);
-        newMagazine.setActive("false");
+        newMagazine.setActive(false);
         newMagazine.setChiefEditor(chiefEditor);
 
         try {
